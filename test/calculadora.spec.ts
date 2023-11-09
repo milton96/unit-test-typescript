@@ -18,10 +18,10 @@ describe("Clase Calculadora", () => {
     const calc = new Calculadora();
 
     //act
-    const suma = calc.resta(4, 2);
+    const resta = calc.resta(4, 2);
 
     //assert
-    expect(suma).to.be.equal(2);
+    expect(resta).to.be.equal(2);
   });
 
   it("Debe multiplicar dos numeros y devolver la multiplicación de esos numeros", () => {
@@ -29,10 +29,10 @@ describe("Clase Calculadora", () => {
     const calc = new Calculadora();
 
     //act
-    const suma = calc.multiplicacion(3, 8);
+    const mutiplicacion = calc.multiplicacion(3, 8);
 
     //assert
-    expect(suma).to.be.equal(24);
+    expect(mutiplicacion).to.be.equal(24);
   });
 
   it("Debe dividir dos numeros y devolver la división de esos numeros", () => {
@@ -40,9 +40,19 @@ describe("Clase Calculadora", () => {
     const calc = new Calculadora();
 
     //act
-    const suma = calc.division(12, 3);
+    const division = calc.division(12, 3);
 
     //assert
-    expect(suma).to.be.equal(4);
+    expect(division).to.be.equal(4);
+  });
+
+  it("Excepción al dividir por cero", () => {
+    //arrange
+    const calc = new Calculadora();
+
+    //act
+
+    //assert
+    expect(() => calc.division(12, 0)).to.throw("Division por cero");
   });
 });
