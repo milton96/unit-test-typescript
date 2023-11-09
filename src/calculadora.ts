@@ -18,3 +18,5 @@ class Calculadora {
     return a / b;
   }
 }
+
+export default Calculadora;
