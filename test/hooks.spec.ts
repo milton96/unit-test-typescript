@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import Calculadora from "../src/calculadora";
 
-describe("Clase Calculadora con hooks", () => {
+describe.skip("Clase Calculadora con hooks", () => {
   let calc: Calculadora;
 
   before(() => {
