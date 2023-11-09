@@ -32,7 +32,7 @@ describe.only("spy, stub y mock", () => {
       spy = sinon.spy(calc, "resta");
 
       //act
-      const suma = calc.suma(4, 2);
+      const suma = calc.resta(4, 2);
 
       //assert
       expect(suma).to.be.equal(2);
