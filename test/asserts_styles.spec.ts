@@ -57,7 +57,7 @@ describe("Estilos de assert", () => {
         expect(tareas).to.be.a("array");
         expect(tareas).to.include("lavar");
 
-        expect(numSuerte);
+        expect(numSuerte).to.be.ok;
         expect(numSuerte).to.be.a("array");
         expect(numSuerte).to.not.include(1);
         
@@ -65,5 +65,39 @@ describe("Estilos de assert", () => {
         expect(id).to.be.a("object");
         expect(id).to.haveOwnProperty("color");
         expect(id).to.have.property("color", "azul");
+    });
+
+    it("Forma should", () => {
+        should();
+        //arrange
+        const nombre: string = "Johnson";
+        const edad: number = 25;
+        const tareas: Array<string> = ["tarea", "cocinar", "lavar", "estudiar"];
+        const numSuerte: Array<number> = [34, 12, 567, 9, 874, 1000];
+        const id: Object = { "nombre": "Johnson", "edad": 25, "color": "azul" };
+
+        //act
+
+        //assert
+        nombre.should.to.be.ok;
+        nombre.should.to.be.a("string");
+        nombre.should.to.be.equal("Johnson");
+        
+        edad.should.to.be.ok;
+        edad.should.to.be.a("number");
+        edad.should.to.be.equal(25);
+
+        tareas.should.to.be.ok;
+        tareas.should.to.be.a("array");
+        tareas.should.to.include("lavar");
+
+        numSuerte.should.to.be.ok;
+        numSuerte.should.to.be.a("array");
+        numSuerte.should.to.not.include(1);
+        
+        id.should.to.be.ok;
+        id.should.to.be.a("object");
+        id.should.to.haveOwnProperty("color");
+        id.should.to.have.property("color", "azul");
     });
 });
