@@ -10,6 +10,10 @@ describe.only("spy, stub y mock", () => {
     calc = new Calculadora();
   });
 
+  afterEach(() => {
+    if (spy) spy.restore();
+  })
+
   describe("Tests para suma", () => {
     it("Debe sumar dos numeros y devolver la suma de esos numeros", () => {
       //arrange
@@ -21,8 +25,6 @@ describe.only("spy, stub y mock", () => {
       //assert
       expect(suma).to.be.equal(11);
       expect(spy.calledOnceWith(3,8)).to.be.true;
-
-      spy.restore();
     });
   });
 
@@ -37,8 +39,6 @@ describe.only("spy, stub y mock", () => {
       //assert
       expect(suma).to.be.equal(2);
       expect(spy.calledOnceWith(4,2)).to.be.true;
-
-      spy.restore();
     });
   });
 });
